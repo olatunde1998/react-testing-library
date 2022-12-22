@@ -14,7 +14,7 @@ it("should renders greet correctly", ()=>{
 * It should render hello followed by the name.
 */
 
-it("should renders greet name correctly", ()=>{
+it("should render greet name correctly", ()=>{
     render(<Greet name="Jack Bau"/>);
     const textElement = screen.getByText(/Jack Bau/i)
     expect(textElement).toBeInTheDocument()
