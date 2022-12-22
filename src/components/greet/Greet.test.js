@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 
 import { Greet } from "components/greet/Greet";
 
-it("should renders greet correctly", ()=>{
+it.skip("should renders greet correctly", ()=>{
     render(<Greet/>);
     const textElement = screen.getByText(/hello/i)
     expect(textElement).toBeInTheDocument()
@@ -14,8 +14,19 @@ it("should renders greet correctly", ()=>{
 * It should render hello followed by the name.
 */
 
-it("should render greet name correctly", ()=>{
-    render(<Greet name="Jack Bau"/>);
-    const textElement = screen.getByText(/Jack Bau/i)
-    expect(textElement).toBeInTheDocument()
+
+describe("greet", ()=>{
+    it.skip("should renders greet name correctly", ()=>{
+        render(<Greet name="Jack Bau"/>);
+        const textElement = screen.getByText(/Jack Bau/i)
+        expect(textElement).toBeInTheDocument()
+    })
+
+    it.skip("should renders greet correctly", ()=>{
+        render(<Greet/>);
+        const textElement = screen.getByText(/hello/i)
+        expect(textElement).toBeInTheDocument()
+    })
+
+
 })
