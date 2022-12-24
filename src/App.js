@@ -1,6 +1,7 @@
 import './App.css';
 import { Greet } from 'components/greet/Greet';
 import { Application } from 'components/application/Application';
+import { Counter } from 'components/counter/counter';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         </a>
         <Greet/>
         <Application/>
+        <Counter/>
       </header>
     </div>
   );
